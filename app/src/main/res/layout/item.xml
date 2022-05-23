@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="2.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/material_dynamic_tertiary95">
+
+            <TextView
+                android:layout_marginLeft="2dp"
+                android:id="@+id/CourseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_marginRight="2dp"
+                android:id="@+id/coursePoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/CourseName"
+                android:layout_alignParentRight="true"
+                android:text="TextView"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/pointsDecrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="2dp"
+                android:layout_below="@id/progress"
+                android:visibility="gone"
+
+
+                android:text="Decrease" />
+
+            <ProgressBar
+
+                android:id="@+id/progress"
+                android:layout_marginBottom="15dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CourseName"
+                android:layout_marginTop="15dp"
+                />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/deleteCourse"
+                android:layout_below="@id/progress"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+
+                />
+
+            <Button
+                android:visibility="gone"
+                android:layout_marginRight="2dp"
+                android:id="@+id/pointsIncrease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Increase"
+                android:layout_below="@id/progress"
+                android:layout_alignRight="@+id/pointsDecrease"
+                android:layout_alignParentRight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CourseName"
+                app:layout_constraintVertical_bias="1.0" />
+            </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
